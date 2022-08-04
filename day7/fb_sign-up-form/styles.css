@@ -1,0 +1,176 @@
+body {
+  background-color: #f0f2f5;
+}
+.wrapper {
+  margin: 200px 0 200px 0;
+}
+.logo {
+  text-align: center;
+}
+.logo img {
+  height: 100px;
+}
+
+.form-wrapper {
+  width: 432px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  margin: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  position: relative;
+}
+.form-header {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  position: relative;
+  width: 432px;
+}
+.form-title {
+  text-align: center;
+  font-size: 25px;
+  line-height: 32px;
+  color: #1c1e21;
+  font-weight: 600;
+}
+.form-slogan {
+  font-size: 15px;
+  line-height: 24px;
+  color: #606770;
+}
+.form-content {
+  border-top: 1px solid #dadde1;
+  padding: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+.last-name {
+  display: flex;
+}
+.surname {
+  margin: 0px 8px 10px 0px;
+}
+.surname,
+.name {
+  border: 1px solid #dddfe2;
+  height: 40px;
+  width: 50%;
+  border-radius: 4px;
+  padding: 12px;
+}
+.name input,
+.surname input {
+  padding: 11px;
+}
+.email {
+}
+.email input,
+.password input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #dddfe2;
+  padding: 11px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.small-title {
+  display: flex;
+  font-size: 12px;
+  color: #606770;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  line-height: 10px;
+  margin: 2px 0px 4px 0px;
+  justify-content: flex-start;
+}
+.form-icon {
+  margin-top: -1px;
+  font-size: 10px;
+  margin-left: 4px;
+}
+.dob {
+  margin-bottom: 10px;
+}
+#day,
+#month,
+#year {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  color: #606770;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding: 0 8px;
+  border: 1px solid #dddfe2;
+}
+.gender {
+}
+.lable-gender {
+  line-height: 36px;
+  position: absolute;
+  left: 10px;
+}
+.gender-box {
+  border: 1px solid #ccd0d5;
+  border-radius: 4px;
+  flex: 1 0 auto;
+  font-weight: normal;
+  height: 36px;
+  margin: 0px 6px 6px;
+  position: relative;
+  width: auto;
+  font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+}
+.checkbox {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.note {
+  font-size: 12px;
+  color: #606770;
+  margin: 11px;
+}
+.note a {
+  color: #385898;
+}
+.note a:hover {
+  text-decoration: underline;
+}
+.form-submit {
+  text-align: center;
+  height: 56px;
+}
+.form-submit button {
+  width: 196px;
+  height: 36px;
+  color: #fff;
+  background-color: #36a420;
+  padding: 0 32px;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+.form-submit button:hover {
+  background-color: #00a400;
+  color: #f0f2f5;
+}
+.form-footer {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.form-footer a {
+  color: #1877f2;
+  font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+}

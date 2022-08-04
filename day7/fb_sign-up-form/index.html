@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="logo">
+                <img
+                  src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-wrapper">
+                <div class="form-header">
+                  <div class="form-title">Tạo tài khoản mới</div>
+                  <div class="form-slogan">Nhanh chóng và dễ dàng.</div>
+                </div>
+
+                <div class="form-content">
+                  <form action="#">
+                    <div class="last-name">
+                      <input
+                        class="surname"
+                        type="text"
+                        name="surname"
+                        placeholder="Họ"
+                        minlength="6"
+                        maxlength="20"
+                        required
+                      />
+                      <input
+                        class="name"
+                        type="text"
+                        name="name"
+                        placeholder="Tên"
+                        minlength="6"
+                        maxlength="20"
+                        required
+                      />
+                    </div>
+                    <div class="email">
+                      <input
+                        type="text"
+                        name="email"
+                        placeholder="Số di động hoặc email"
+                        minlength="6"
+                        maxlength="20"
+                        required
+                      />
+                    </div>
+                    <div class="password">
+                      <input
+                        type="password"
+                        name="password"
+                        placeholder="Mật khẩu mới"
+                        minlength="8"
+                        maxlength="20"
+                        required
+                      />
+                    </div>
+                    <div class="dob">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="small-title">
+                            Sinh nhật <i class="fas fa-question-circle form-icon"></i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4">
+                          <select name="day" id="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="month" id="month">
+                            <option value="Tháng 1">Tháng 1</option>
+                            <option value="Tháng 2">Tháng 2</option>
+                            <option value="Tháng 3">Tháng 3</option>
+                            <option value="Tháng 4">Tháng 4</option>
+                            <option value="Tháng 5">Tháng 5</option>
+                            <option value="Tháng 6">Tháng 6</option>
+                            <option value="Tháng 7" selected>Tháng 7</option>
+                            <option value="Tháng 8">Tháng 8</option>
+                            <option value="Tháng 9">Tháng 9</option>
+                            <option value="Tháng 10">Tháng 10</option>
+                            <option value="Tháng 11">Tháng 11</option>
+                            <option value="Tháng 12">Tháng 12</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="year" id="year">
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014" selected>2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gender">
+                      <div class="small-title">
+                        Giới tính <i class="fas fa-question-circle form-icon"></i></i>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 gender-box">
+                          <label class="lable-gender" for="female">Nữ</label>
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            class="checkbox"
+                            id="female"
+                            required
+                          />
+                        </div>
+                        <div class="col-4 gender-box">
+                          <label class="lable-gender" for="male">Nam</label>
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            class="checkbox"
+                            id="male"
+                            required
+                          />
+                        </div>
+                        <div class="col-4 gender-box">
+                          <label class="lable-gender" for="other">Khác</label>
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                            id="other"
+                            class="checkbox"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="note">
+                      <p>
+                        Người dùng dịch vụ của chúng tôi có thể đã tải thông tin
+                        liên hệ của bạn lên Facebook.
+                        <a href="">Tìm hiểu thêm.</a>
+                      </p>
+                    </div>
+                    <div class="note">
+                      <p>
+                        Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                        <a href="">Điều khoản</a>,
+                        <a href="">Chính sách quyền riêng tư</a> và
+                        <a href="">Chính sách cookie</a> của chúng tôi. Bạn có
+                        thể nhận được thông báo của chúng tôi qua SMS và hủy
+                        nhận bất kỳ lúc nào.
+                      </p>
+                    </div>
+
+                    <div class="form-submit">
+                      <button type="submit">Đăng ký</button>
+                    </div>
+                    <div class="form-footer">
+                      <a href="">Bạn đã có tài khoản ư ?</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

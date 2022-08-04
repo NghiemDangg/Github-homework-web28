@@ -1,0 +1,120 @@
+body {
+  background-color: #f0f2f5;
+}
+.wrapper {
+  margin: 200px 0 200px 0;
+}
+.content-right {
+  padding-right: 32px;
+  width: 580px;
+}
+.logo {
+  width: 50%;
+  margin-left: -30px;
+}
+.slogan {
+  color: #1c1e21;
+  font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 500;
+}
+.form-wrapper {
+  height: 456px;
+  width: 396px;
+}
+.form-content {
+  height: 360px;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.form-input {
+  padding-top: 19px;
+}
+
+.input-text {
+  padding: 6px 0;
+  position: relative;
+}
+.input-text input {
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 330px;
+  border-radius: 4px;
+  border: 1px solid #dddfe2;
+  color: #1d2129;
+}
+.input-text input:focus {
+  outline: 0px;
+  border: 2px solid #1877f2;
+}
+.form-submit-login {
+  padding-top: 6px;
+}
+.form-submit-login button {
+  color: #f0f2f5;
+  background-color: #1877f2;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  width: 332px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-submit-login button:hover {
+  background-color: #166fe5;
+}
+.form-submit-sign-up {
+  padding-top: 6px;
+}
+.form-submit-sign-up a {
+  display: inline-block;
+  height: 48px;
+  width: 180px;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  background-color: #42b72a;
+  color: #f0f2f5;
+}
+
+.form-submit-sign-up a:hover {
+  background-color: #36a420;
+  border-color: #36a420;
+}
+.form-forget-password {
+  font-size: 16px;
+  font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+  margin-top: 16px;
+}
+
+.form-forget-password a {
+  color: #1877f2;
+}
+.form-line {
+  border-bottom: 1px solid #dadde1;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+}
+
+.form-footer {
+  color: #1c1e21;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 28px;
+  text-align: center;
+}
+.form-footer a {
+  font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
