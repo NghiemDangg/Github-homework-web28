@@ -89,3 +89,16 @@ function findAreaOfTriangle(a, b, c) {
 function celsiusToFahrenheit(temp) {
   return (temp - 273.15) * 1.8 + 32;
 }
+
+console.log("Chu vi hình chữ nhật: " + findPerimeterOfRectangle(3, 6));
+console.log("Diện tích hình chữ nhật: " + findAreaOfRectangle(3, 6));
+console.log("Đường kính hình tròn: " + findDiameterOfCircle(4));
+console.log("Chu vi hình tròn: " + findCircumferenceOfCircle(4));
+console.log("Diện tích hình tròn: " + findAreaOfCircle(4));
+console.log(
+  "diện tích hình tam giác theo công thức Heron: " + findAreaOfTriangle(4, 5, 6)
+);
+console.log(
+  "Chuyển đổi nhiệt ở ở thang nhiệt Celsius sang Fahrenheit:" +
+    celsiusToFahrenheit(300)
+);
