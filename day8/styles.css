@@ -1,0 +1,283 @@
+.header-wrapper {
+  font-family: Roboto-Regular, "Helvetica Neue", Helvetica, Tahoma, Arial,
+    Sans-serif;
+  height: 90px;
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(134, 134, 134, 0.383);
+  width: 100%;
+}
+
+.header-menu {
+}
+.logo img {
+  width: 110px;
+  margin-left: 0;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.nav-menu {
+  display: flex;
+  margin-left: auto;
+}
+.menu-item {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin: 0 16px;
+}
+.menu-item > a {
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: transparent;
+  line-height: 140px;
+}
+.menu-item:hover a {
+  color: rgba(255, 255, 255, 0.621);
+}
+.banner-fill {
+  font-family: Roboto-Regular, "Helvetica Neue", Helvetica, Tahoma, Arial,
+    Sans-serif;
+}
+.banner {
+  position: relative;
+  top: 0;
+  padding-top: 50%;
+  background: url("./img/bach-moc-luong-tu-1.jpg") top center / cover no-repeat;
+  margin-bottom: 40px;
+}
+
+.text-content {
+  position: absolute;
+  color: #f1f1f1;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.text-title {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.banner .text-heading {
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.banner .text-description {
+  font-size: 15px;
+  margin-top: 16px;
+}
+.tour {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  font-family: Roboto-Regular, "Helvetica Neue", Helvetica, Tahoma, Arial,
+    Sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tour-title {
+  width: 100%;
+  margin-top: 40px;
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.tour-p {
+  width: 100%;
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  font-family: "Raleway", "Helvetica Neue", Arial, Verdana, sans-serif;
+  color: #b63327;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-style: italic;
+}
+.booking {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.booking-thumbnail {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.booking-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 324px;
+  transition-duration: 0.2s;
+}
+
+.booking:hover .booking-thumbnail img {
+  transform: scale(1.1);
+}
+.booking-description {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-family: "Raleway", "Helvetica Neue", Arial, Verdana, sans-serif;
+  color: #ccc;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.booking-title {
+}
+.booking-meta {
+}
+
+.customer-reviews {
+  font-family: "Raleway", "Helvetica Neue", Arial, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+.reviews-title {
+  text-transform: uppercase;
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.reviews-content {
+  color: #353535;
+  font-weight: 500px;
+  font-family: "Arima Madurai", sans-serif;
+  font-style: italic;
+}
+.customer-name {
+  padding-top: 15px;
+  color: #353535;
+}
+.slider {
+  background: url("https://media.mia.vn/uploads/blog-du-lich/KH2F47~1-1621753459.JPG")
+    top center / cover no-repeat;
+  position: relative;
+  top: 0;
+  padding-top: 50%;
+  margin-bottom: 60px;
+}
+
+.slider .text-content .text-title {
+  margin-bottom: 20px;
+}
+.LaiChau_description {
+}
+.description-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 12px;
+  padding: 0 15px 30px;
+}
+.description-content {
+  font-family: "Arima Madurai", sans-serif;
+  color: #353535;
+  margin-bottom: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: left;
+}
+.text-left {
+  border-right: 1px solid #b63327;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text.right {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer {
+  background: url("./img/LaiChaucity.jpg") top center / cover no-repeat;
+  position: relative;
+  top: 16px;
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 50px;
+}
+.footer-wrapper {
+  background-color: rgba(134, 134, 134, 0.383);
+  padding-top: 30px;
+}
+.logo-footer img {
+  height: 340px;
+}
+
+.contact {
+  padding: 0 30px 30px;
+  margin-bottom: 0;
+  color: #dfdede;
+}
+.contact-title,
+.footer-tour-title {
+  font-size: 40px;
+  color: #dfdede;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-family: "Arima Madurai", sans-serif;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+.contact-body {
+  color: #dfdede;
+  font-family: "Arima Madurai", sans-serif;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+.location {
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+.location i {
+  margin-right: 16px;
+}
+.phone-number {
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+.social-media a i {
+  color: #dfdede;
+  font-size: 30px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+  margin-left: 16px;
+}
+
+.footer-tour {
+  max-width: 100%;
+  width: 100%;
+  transform: translateZ(0);
+  margin: 0 auto;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+}
+
+.footer-tour-item {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.footer-tour-item img {
+  display: block;
+  width: 100%;
+  height: 100px;
+}

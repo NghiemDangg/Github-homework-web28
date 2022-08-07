@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  /* giới hạn kích thước trong vùng chứa */
+  max-width: 100%;
+  /* loại bỏ phần chân dòng (khoảng trắng nhỏ ở dưới hình ảnh) */
+  vertical-align: middle;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* loại bỏ khoảng trống 2 cột ngoài cùng */
+  margin-left: -5px;
+  margin-right: -5px;
+  /* tạo khoảng cách giữa các hàng */
+  row-gap: 10px;
+}
+/* nếu muốn khoảng trống ở giữ 2 phần tử = 10px , => padding-left: 5px; padding-right:5px; */
+.row > * {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* độ rộng 1 cột */
+.col-1 {
+  flex: 0 1 8.33333333%;
+}
+/* độ rộng bằng 2 cột */
+.col-2 {
+  flex: 0 1 16.666667%;
+}
+
+/* độ rộng bằng 3 cột */
+.col-3 {
+  flex: 0 1 25%;
+}
+/* độ rộng bằng 4 cột */
+.col-4 {
+  flex: 0 1 33.333333%;
+}
+/* độ rộng bằng 5 cột */
+.col-5 {
+  flex: 0 1 41.666667%;
+}
+/* độ rộng bằng 6 cột */
+.col-6 {
+  flex: 0 1 50%;
+}
+/* độ rộng bằng 7 cột */
+.col-7 {
+  flex: 0 1 58.333333%;
+}
+/* độ rộng bằng 8 cột */
+.col-8 {
+  flex: 0 1 66.666667%;
+}
+/* độ rộng bằng 9 cột */
+.col-9 {
+  flex: 0 1 75%;
+}
+/* độ rộng bằng 10 cột */
+.col-10 {
+  flex: 0 1 83.333333%;
+}
+/* độ rộng bằng 11 cột */
+.col-11 {
+  flex: 0 1 91.666667%;
+}
+/* độ rộng bằng 12 cột */
+.col-12 {
+  flex: 0 1 100%;
+}
