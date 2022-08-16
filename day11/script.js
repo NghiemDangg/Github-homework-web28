@@ -8,6 +8,7 @@
  * @return {number} Số lớn nhất trong 3 số
  */
 function maxOfThree(a, b, c) {
+  let max = a;
   if (a > b && a > c) {
     return a;
   } else if (b > a && b > c) {
@@ -18,11 +19,11 @@ function maxOfThree(a, b, c) {
     return NaN;
   }
 }
-console.log("Bai 1:");
-console.log(maxOfThree(6, 5, 4));
-console.log(maxOfThree(5, 6, 4));
-console.log(maxOfThree(4, 5, 6));
-console.log(maxOfThree(6, 5, "*"));
+// console.log("Bai 1:");
+// console.log(maxOfThree(6, 5, 4));
+// console.log(maxOfThree(5, 6, 4));
+// console.log(maxOfThree(4, 5, 6));
+// console.log(maxOfThree(6, 5, "*"));
 /**
  * Tìm mùa tương ứng với tháng
  *
@@ -40,12 +41,12 @@ function findSeason(month) {
     case 1:
     case 2:
     case 12:
-      console.log("Winter");
+      return console.log("Winter");
       break;
     case 3:
     case 4:
     case 5:
-      console.log("Spring");
+      return console.log("Spring");
       break;
     case 6:
     case 7:
@@ -89,11 +90,11 @@ function isLeafYear(year) {
     return false;
   }
 }
-console.log("\nBài 3:");
-console.log(isLeafYear(2020));
-console.log(isLeafYear(1999));
-console.log(isLeafYear(2000));
-console.log(isLeafYear(19390));
+// console.log("\nBài 3:");
+// console.log(isLeafYear(2020));
+// console.log(isLeafYear(1999));
+// console.log(isLeafYear(2000));
+// console.log(isLeafYear(19390));
 /**
  * Tìm số ngày trong tháng
  *
@@ -115,13 +116,13 @@ function findDayOfMonth(month, year) {
     case 8:
     case 10:
     case 12:
-      console.log(31);
+      return console.log(31);
       break;
     case 4:
     case 6:
     case 9:
     case 11:
-      console.log(30);
+      return console.log(30);
       break;
     case 2:
       if (year % 4 == 0 && year % 100 != 0) {
@@ -133,7 +134,7 @@ function findDayOfMonth(month, year) {
       }
       break;
     default:
-      console.log("Enter the month");
+      return console.log("Enter the month");
       break;
   }
 }
@@ -151,23 +152,23 @@ findDayOfMonth(11, 2014);
  */
 function calcGrade(point) {
   if (0 <= point && point <= 4.0) {
-    console.log("F");
-  } else if (4.0 < point && point <= 5.5) {
-    console.log("D");
-  } else if (5.5 < point && point <= 7.0) {
-    console.log("C");
-  } else if (7 < point && point <= 8.5) {
-    console.log("B");
-  } else if (8.5 < point && point < 10) {
-    console.log("A");
+    return console.log("F");
+  } else if (point <= 5.5) {
+    return console.log("D");
+  } else if (point <= 7.0) {
+    return console.log("C");
+  } else if (point <= 8.5) {
+    return console.log("B");
+  } else if (point < 10) {
+    return console.log("A");
   } else {
     return NaN;
   }
 }
 console.log("\nBài 5:");
-calcGrade(-2);
-calcGrade(7.2);
-calcGrade(3.5);
+calcGrade(0);
+calcGrade(4.0);
+calcGrade(7.0);
 calcGrade(8.6);
 calcGrade(6.0);
 calcGrade(4.2);
@@ -193,15 +194,15 @@ function calcTaxiFee(km) {
     return NaN;
   }
 }
-console.log("\nBài 6:");
+// console.log("\nBài 6:");
 
-console.log(calcTaxiFee(1));
-console.log(calcTaxiFee(2.8));
-console.log(calcTaxiFee(31));
-console.log(calcTaxiFee(30.99));
-console.log(calcTaxiFee(32));
-console.log(calcTaxiFee(200));
-console.log(calcTaxiFee(0));
+// console.log(calcTaxiFee(1));
+// console.log(calcTaxiFee(2.8));
+// console.log(calcTaxiFee(31));
+// console.log(calcTaxiFee(30.99));
+// console.log(calcTaxiFee(32));
+// console.log(calcTaxiFee(200));
+// console.log(calcTaxiFee(0));
 /**
  * Tìm nghiệm phương trình bậc 2 ax^2 + bx + c = 0
  *
@@ -241,9 +242,9 @@ function solveEquation(a, b, c) {
     }
   }
 }
-console.log("\nBài 7:");
+// console.log("\nBài 7:");
 
-console.log(solveEquation(0, 0, 0));
-console.log(solveEquation(0, 0, 3));
-console.log(solveEquation(0, 9, 3));
-console.log(solveEquation(36, 58, 8));
+// console.log(solveEquation(0, 0, 0));
+// console.log(solveEquation(0, 0, 3));
+// console.log(solveEquation(0, 9, 3));
+// console.log(solveEquation(36, 58, 8));

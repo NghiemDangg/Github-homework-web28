@@ -105,18 +105,13 @@ function factorial(n) {
  */
 function isStrong(n) {
   var sum = 0;
-  var originNumber = n;
-  while (n > 0) {
-    var lastDigit = n % 10;
-    var fact = factorial(lastDigit);
-    sum = sum + fact;
-    n = n /10;
+  var temp = n;
+  while (temp > 0) {
+    var reminder = temp % 10;
+    sum = sum + factorial(reminder);
+    temp = (temp - (temp % 10)) / 10;
   }
-  if (sum == originNumber) {
-    return true;
-  } else {
-    return false;
-  }
+  return sum === n;
 }
 
 console.log(isStrong(145));
