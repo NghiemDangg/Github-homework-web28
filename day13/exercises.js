@@ -19,17 +19,16 @@ const guessList = {
  * @return {string} Câu chào
  */
 function greeting(name) {
-  for (let key in guessList) {
-    if (name == key) {
-      console.log("Hi ! I'm " + key + ", and I'm from " + guessList[key] + "!");
-    } else {
-      console.log("Hi! I'm guess");
-    }
+  if (name in guessList) {
+    return console.log("Hi ! I'm " + name + ", and I'm from " + guessList[name] + "!");
+  }else{
+          console.log("Hi! I'm guess");
   }
+  
 }
 
-// greeting('Randy');
-// greeting('Cho Chien');
+greeting('Randy');
+greeting('Cho Chien');
 // Danh sách thành viên trong 1 gia đình
 // Tên là key, tuổi là value
 const myFamily = {
