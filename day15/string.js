@@ -60,7 +60,7 @@ function countVowel(str) {
   let vowel_list = 'euoaiEUOAI';
   for(let i = 0; i < str.length ; i++ ){
     if(vowel_list.indexOf(str[i]) !== -1){
-      count += 1;
+      count ;
     }
   }
   return count;
