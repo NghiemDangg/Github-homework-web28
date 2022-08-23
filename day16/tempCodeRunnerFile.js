@@ -1,3 +1,1 @@
-else{
-      return false;
-    }
+return result;

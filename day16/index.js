@@ -289,7 +289,7 @@ console.log(avgObj(student));
  */
 
 function sortAge(arr) {
-  let result = arr.sort((a,b) => a.Age - b.Age);
+  let result = arr.sort((a, b) => a.Age - b.Age);
   return result;
 }
 
@@ -303,17 +303,17 @@ console.log(sortAge(student));
  * @return {arr[]} sắp xếp mảng theo tên
  */
 function sortName(arr) {
-  arr.sort((a, b) => {
-    const name1 = a.name.toUpperCase();
-    const name2 = b.name.toUpperCase();
-    if (name1 > name2) {
-      return 1;
-    } else if (name1 < name2) {
+  arr.sort(function (a, b) {
+    if (a.name.toUpperCase() < b.name.toUpperCase()) {
       return -1;
     }
-    return 0;
+    if (a.name.toUpperCase() > b.name.toUpperCase()) {
+      return 1;
+    }
   });
 }
+
+console.log(sortName(student));
 /**
  * Lọc ra những sinh viên nào có tên bắt đầu bằng chữ 'H' hoặc 'h'.
  *
