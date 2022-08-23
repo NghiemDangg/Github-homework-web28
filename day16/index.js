@@ -208,7 +208,7 @@ console.log(checkString("Hello world", "Hello2222"));
 function removeValue(arr) {
   const result = [];
   let str = "";
-  const arr2 = [false, null, undefined, NaN, 0,str];
+  const arr2 = [false, null, undefined, NaN, 0, str];
   for (let i of arr) {
     if (!arr2.includes(i)) {
       result.push(i);
@@ -217,7 +217,7 @@ function removeValue(arr) {
   return result;
 }
 
-console.log(removeValue([false, 1, 3, NaN, 5, 6,"", "hehe"]));
+console.log(removeValue([false, 1, 3, NaN, 5, 6, "", "hehe"]));
 /**
  *Lọc ra các phần tử có độ dài lớn nhất
  *
@@ -230,16 +230,22 @@ console.log(removeValue([false, 1, 3, NaN, 5, 6,"", "hehe"]));
  *
  */
 
-//  function filterArray(arr){
-//   const result = [];
+function filterArray(arr) {
+  let maxLength = 0;
 
-//   for(let i of arr){
-//     arr[i].length();
-//   }
-//  }
-
-//  console.log(filterArray(['aba', 'aa', 'ad', 'c', 'vcd'] ));
-
+  arr.map((w) => {
+    if (w.length > maxLength) {
+      maxLength = w.length;
+    }
+  });
+  const result = arr.filter((x) => {
+    if (x.length === maxLength) {
+      return x;
+    }
+  });
+  return result;
+}
+console.log(filterArray(["aba", "aa", "ad", "c", "vcd"]));
 
 //xử lý đối tượng
 const student = [
@@ -263,13 +269,9 @@ const student = [
  * @return {number} tuổi trung bình của toàn bộ sinh viên
  */
 
-function avgObj(arr){
-  let sum = 0;
-  let amount = Object.keys(arr).length;
-  for(let value in arr){
-    sum += arr.value;
-  }
-  let result = (sum)/(amount);
+function avgObj(arr) {
+  let sum = arr.reduce(arr[0],arr[arr.length - 1],);
+  
   return result;
 }
 console.log(avgObj(student));
@@ -283,10 +285,14 @@ console.log(avgObj(student));
  * @return {arr[]} sắp xếp mảng theo tuổi
  */
 
-function sortAge(arr){
-  arr.sort(function(arr1,arr2){
-    if(arr1.Age < arr2.Age){return -1;}
-    if(arr1.Age > arr2.Age){return 1;}
+function sortAge(arr) {
+  arr.sort(function (arr1, arr2) {
+    if (arr1.Age < arr2.Age) {
+      return -1;
+    }
+    if (arr1.Age > arr2.Age) {
+      return 1;
+    }
   });
 }
 
