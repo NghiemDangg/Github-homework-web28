@@ -271,10 +271,11 @@ const student = [
  */
 
 function avgObj(arr) {
-  let average = arr.reduce(function (sum, value) {
-      return parseInt(sum)  + parseInt(value.Age);
+  let average =
+    arr.reduce(function (sum, value) {
+      return parseInt(sum) + parseInt(value.Age);
     }, 0) / arr.length;
-    return average
+  return average;
 }
 console.log(avgObj(student));
 
@@ -288,14 +289,8 @@ console.log(avgObj(student));
  */
 
 function sortAge(arr) {
-  arr.sort(function (arr1, arr2) {
-    if (arr1.Age < arr2.Age) {
-      return -1;
-    }
-    if (arr1.Age > arr2.Age) {
-      return 1;
-    }
-  });
+  let result = arr.sort((a,b) => a.Age - b.Age);
+  return result;
 }
 
 console.log(sortAge(student));
@@ -307,7 +302,18 @@ console.log(sortAge(student));
  *
  * @return {arr[]} sắp xếp mảng theo tên
  */
-
+function sortName(arr) {
+  arr.sort((a, b) => {
+    const name1 = a.name.toUpperCase();
+    const name2 = b.name.toUpperCase();
+    if (name1 > name2) {
+      return 1;
+    } else if (name1 < name2) {
+      return -1;
+    }
+    return 0;
+  });
+}
 /**
  * Lọc ra những sinh viên nào có tên bắt đầu bằng chữ 'H' hoặc 'h'.
  *
