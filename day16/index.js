@@ -267,12 +267,14 @@ const student = [
  * @param {arr[]} arr mảng chứa đối tượng sinh viên
  *
  * @return {number} tuổi trung bình của toàn bộ sinh viên
+ *
  */
 
 function avgObj(arr) {
-  let sum = arr.reduce(arr[0],arr[arr.length - 1],);
-  
-  return result;
+  let average = arr.reduce(function (sum, value) {
+      return parseInt(sum)  + parseInt(value.Age);
+    }, 0) / arr.length;
+    return average
 }
 console.log(avgObj(student));
 
@@ -297,3 +299,20 @@ function sortAge(arr) {
 }
 
 console.log(sortAge(student));
+/**
+ * Sắp xếp lại mảng trên theo tên
+ *
+ *
+  @param {arr[]} arr mảng chứa đối tượng sinh viên
+ *
+ * @return {arr[]} sắp xếp mảng theo tên
+ */
+
+/**
+ * Lọc ra những sinh viên nào có tên bắt đầu bằng chữ 'H' hoặc 'h'.
+ *
+ *
+  @param {arr[]} arr mảng chứa đối tượng sinh viên
+ *
+ * @return {arr[]} sắp xếp mảng theo tên 'H' hoặc 'h'
+ */
