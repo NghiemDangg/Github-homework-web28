@@ -320,5 +320,7 @@ console.log(sortName(student));
  *
   @param {arr[]} arr mảng chứa đối tượng sinh viên
  *
- * @return {arr[]} sắp xếp mảng theo tên 'H' hoặc 'h'
+ *@return {arr[]} sắp xếp mảng theo tên 'H' hoặc 'h'
+ * 
+ * 
  */
