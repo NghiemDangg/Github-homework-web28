@@ -23,7 +23,10 @@ let addClass = description.classList;
 addClass.add("text-bold");
 // Thay thế thẻ có class=“para-3” thành thẻ button có nội dung là “Click me”
 let changePara3 = document.querySelector(".para-3");
-changePara3.innerHTML = '<button> click me </button>';
+let button = document.createElement("button");
+button.type = "button";
+button.innerText = "click me";
+changePara3.parentNode.replaceChild(button,changePara3);
 // Copy thẻ có class=“para-2” và hiển thị ngay đằng sau thẻ đó
 let addPara2 = document.querySelector(".para-2");
 let clone = addPara2.cloneNode(true);
