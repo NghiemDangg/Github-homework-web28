@@ -18,13 +18,16 @@ for (let i = 0; i < changePara.length; i++) {
 let changeTitle = document.querySelector("#title");
 changeTitle.innerHTML = "Đây là thẻ tiêu đề";
 // Thêm class “text-bold” vào thẻ có class=“description” (định nghĩa class “text-bold” có tác dụng in đậm chữ) (Không bắt buộc, nếu làm được thì làm)
+let description = document.querySelector(".description");
+let addClass = description.classList;
+addClass.add("text-bold");
 // Thay thế thẻ có class=“para-3” thành thẻ button có nội dung là “Click me”
 let changePara3 = document.querySelector(".para-3");
-// changePara3.innerHTML = '<button> click me </button>';
+changePara3.innerHTML = '<button> click me </button>';
 // Copy thẻ có class=“para-2” và hiển thị ngay đằng sau thẻ đó
 let addPara2 = document.querySelector(".para-2");
 let clone = addPara2.cloneNode(true);
 addPara2.appendChild(clone);
 // Xóa thẻ có class=“para-1”
 let removePara1 = document.querySelector(".para-1");
-// removePara1.remove();
+removePara1.remove();
