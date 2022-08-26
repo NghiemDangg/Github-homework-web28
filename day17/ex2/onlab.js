@@ -23,11 +23,13 @@ nodeUl[lastIndex].textContent = "Sleep";
 // ngày ngày/tháng/năm
 let now = new Date();
 let currentTime = now.toLocaleString("vi-VN");
-
+console.log(currentTime);
 let nodeDiv = document.querySelector(".clock");
-let createNode = document.createElement("p");
-createNode.innerHTML = currentTime;
-nodeDiv.appendChild(createNode);
+// let createNode = document.createElement("p");
+// createNode.innerHTML = currentTime;
+// nodeDiv.appendChild(createNode);
+
+nodeDiv.innerHTML = "Bây giờ là: " + currentTime;
 // 8. Đếm số từ trong đoạn văn p.bio xem có bao nhiêu từ Ba (không phân biệt chữ hoa chữ
 // thường) và thêm nội dung vào thẻ p.num-of-words bên dưới thông báo kết quả dạng Ở đoạn
 // văn trên có xx từ 'Ba'
