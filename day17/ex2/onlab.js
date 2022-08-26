@@ -23,7 +23,6 @@ nodeUl[lastIndex].textContent = "Sleep";
 // ngày ngày/tháng/năm
 let now = new Date();
 let currentTime = now.toLocaleString("vi-VN");
-console.log(currentTime);
 let nodeDiv = document.querySelector(".clock");
 // let createNode = document.createElement("p");
 // createNode.innerHTML = currentTime;
@@ -38,7 +37,7 @@ let count = nodePara.split("ba").length - 1;
 document.querySelector(".num-of-words").textContent = count;
 // 9. Thêm một hàng mới vào table (tham khảo API của HTMLTableElement)
 let table = document.querySelector(".list-students");
-table.style.border = "1px solid black";
+// table.style.border = "1px solid black";
 let row = table.insertRow(0);
 // 10. Thêm một cột (ô) mới vào hàng vừa tạo có nội dung Thầy giáo Ba siêu cấp đẹp trai
 let cell = row.insertCell(0);
