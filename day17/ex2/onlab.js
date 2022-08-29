@@ -33,8 +33,21 @@ nodeDiv.innerHTML = "Bây giờ là: " + currentTime;
 // thường) và thêm nội dung vào thẻ p.num-of-words bên dưới thông báo kết quả dạng Ở đoạn
 // văn trên có xx từ 'Ba'
 let nodePara = document.querySelector(".bio").textContent.toLowerCase();
+// let count = 0;
+// let start = 0;
+// while(true){
+//     let index = text.indexOf("ba",start);
+
+//     if(index === -1){
+//         break;
+//     }else{
+//         count++;
+//         start = index;
+//     }
+// }
 let count = nodePara.split("ba").length - 1;
-document.querySelector(".num-of-words").textContent = count;
+// document.querySelector(".num-of-words").textContent = count;
+document.querySelector(".num-of-words").textContent = "Có " + count + " từ";
 // 9. Thêm một hàng mới vào table (tham khảo API của HTMLTableElement)
 let table = document.querySelector(".list-students");
 // table.style.border = "1px solid black";
