@@ -25,10 +25,12 @@ for (let i = 0; i < todos.length; i++) {
   let done = document.createElement("btn");
   done.innerHTML = "Hoàn Thành";
   done.style.border = "1px solid black";
+  done.style.marginLeft = "14px";
 
   let remove = document.createElement("btn");
   remove.innerHTML = "Xoá";
   remove.style.border = "1px solid black";
+  remove.style.marginLeft = "14px";
 
   ul.appendChild(li);
   li.appendChild(span);
