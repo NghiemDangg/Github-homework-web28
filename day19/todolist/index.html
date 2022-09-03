@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/4697/4697260.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/font/fontawesome-free-6.1.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo list</h1>
+      <div class="todo-input">
+        <input type="text" placeholder="Nhập công việc" id="todo-input" />
+        <button id="btn-add">Thêm</button>
+      </div>
+      <div class="todo-option">
+        <div class="todo-option-item">
+          <input
+            type="radio"
+            name="todo-option-item"
+            id="all"
+            checked
+            value="1"
+          />
+          <label for="All">All</label>
+        </div>
+        <div class="todo-option-item">
+          <input
+            type="radio"
+            name="todo-option-item"
+            id="unactive"
+            value="2"/>
+          <label for="unactive">Chưa hoàn thành</label>
+        </div>
+        <div class="todo-option-item">
+          <input
+            type="radio"
+            name="todo-option-item"
+            id="active"
+            value="3"/>
+          <label for="active">Hoàn thành</label>
+        </div>
+      </div>
+      <!-- todo-list -->
+      <div class="todo-container">
+        <div class="todo-list">
+          <div class="todo-item">
+            <div class="todo-item-title">
+              <input type="checkbox" />
+              <p>Làm bài tập</p>
+            </div>
+            <div class="option">
+              <button class="btn btn-update">
+                <i class="fa-solid fa-pen-to-square icon-update"></i>
+              </button>
+              <button class="btn btn-delete">
+                <i class="fa-solid fa-square-xmark icon-delete"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
