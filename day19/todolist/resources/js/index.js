@@ -1,9 +1,8 @@
 const todoList = document.querySelector(".todo-list");
 const todoInput = document.querySelector("#todo-input");
 const btnAdd = document.querySelector("#btn-add");
-const itemUnactive = document.getElementById("unactive");
-const itemActive = document.getElementById("active");
-const todoItem = document.querySelectorAll(".todo-item");
+const filterOption = document.querySelector(".todo-option");
+
 let isUpdate = false;
 let idUpdate = null;
 //danh sách công việc là 1 mảng và mỗi mảng là 1 obj
@@ -140,11 +139,6 @@ function toggleStatus(id) {
   renderUI(todos);
 }
 //filter todos
-itemUnactive.addEventListener("click", () => {
-  todos.filter((e) =>{
-      return e.status == false;
-  })
-});
 
 renderUI(todos);
 /**Local Storage
