@@ -139,7 +139,17 @@ function toggleStatus(id) {
   renderUI(todos);
 }
 //filter todos
+let all = document.getElementById("all");
+let unactive = document.getElementById("unactive");
+let active = document.getElementById("active");
 
+all.addEventListener("click", () => {
+  renderUI(todos);
+});
+
+unactive.addEventListener("click", () => {
+ 
+});
 renderUI(todos);
 /**Local Storage
  * Là một phần tích hợp sẵn trong Browser giúp lưu trữ và truy vấn dữ liệu vô thời hạn trong trình duyệt của người dùng
