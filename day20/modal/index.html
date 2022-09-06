@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <img onclick="openModal();currentSlide(1)" src="https://i.pinimg.com/236x/93/c7/49/93c749a472dcc9a17b3471c85ca1261a.jpg" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img onclick="openModal();currentSlide(2)" src="https://i.pinimg.com/236x/e2/64/50/e264503e4088502818ac2d99cebef268.jpg" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img onclick="openModal();currentSlide(3)" src="https://i.pinimg.com/236x/fd/bf/0a/fdbf0abd146d13eaa44ce35915e76dc4.jpg" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img onclick="openModal();currentSlide(4)" src="https://i.pinimg.com/236x/0e/c8/ee/0ec8ee63c8c8865092bcf3bb2ab4e29b.jpg" class="hover-shadow">
+        </div>
+    </div>
+<!-- ligthbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="https://i.pinimg.com/236x/93/c7/49/93c749a472dcc9a17b3471c85ca1261a.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="https://i.pinimg.com/236x/e2/64/50/e264503e4088502818ac2d99cebef268.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="https://i.pinimg.com/236x/fd/bf/0a/fdbf0abd146d13eaa44ce35915e76dc4.jpg" style="width:40%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="https://i.pinimg.com/236x/0e/c8/ee/0ec8ee63c8c8865092bcf3bb2ab4e29b.jpg" style="width:40%">
+        </div>
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" onclick="currentSlide(1)" src="https://i.pinimg.com/236x/93/c7/49/93c749a472dcc9a17b3471c85ca1261a.jpg" onclick="currentSlide(1)" alt="Monkey D. Luffy">
+    </div>
+
+    <div class="column">
+      <img class="demo" onclick="currentSlide(2)" src="https://i.pinimg.com/236x/e2/64/50/e264503e4088502818ac2d99cebef268.jpg" onclick="currentSlide(2)" alt="Roronoa Zoro">
+    </div>
+
+    <div class="column">
+      <img class="demo" onclick="currentSlide(3)" src="https://i.pinimg.com/236x/fd/bf/0a/fdbf0abd146d13eaa44ce35915e76dc4.jpg" onclick="currentSlide(3)" alt="Vinsmoke Sanji">
+    </div>
+
+    <div class="column">
+      <img class="demo" onclick="currentSlide(4)" src="https://i.pinimg.com/236x/0e/c8/ee/0ec8ee63c8c8865092bcf3bb2ab4e29b.jpg" onclick="currentSlide(4)" alt="Trafalgar D. Water Law">
+    </div>
+  </div>
+</div>
+    <script src="./index.js"></script>
+</body>
+</html>
