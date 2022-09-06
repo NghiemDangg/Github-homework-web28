@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 1.2rem;
+      }
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+      .submit {
+        background-color: #16cc9b;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: 2px solid #16cc9b;
+        color: #ffffff;
+        transition: all 0.25s linear;
+        cursor: pointer;
+      }
+      .submit:hover{
+       background-color: #51b59a;
+      }
+      .container {
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      #message {
+        background: #f1f1f1;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+        border: 1px solid #16cc9b;
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: none;
+      }
+      #message p {
+        padding: 10px 35px;
+        font-size: 18px;
+        font-size: 1.2rem;
+        font-family: "Nunito Sans", sans-serif;
+      }
+      .form-title {
+        text-align: center;
+        margin-bottom: 14px;
+        font-weight: 600;
+        color: #16cc9b;
+      }
+      label {
+        color: #16cc9b;
+      }
+      input:focus{
+        outline: none;
+        border: 2px solid #16cc9b;
+      }
+      /* Add a green text color and a checkmark when the requirements are right */
+      .valid {
+        color: #16cc9b;
+        transition: all 0.25s linear;
+      }
+      .valid::before {
+        position: relative;
+        left: -35px;
+        content: "✅";
+      }
+
+      /* Add a red text color and an "x" icon when the requirements are wrong */
+      .invalid {
+        color: red;
+        transition: all 0.25s linear;
+      }
+
+      .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "❌";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-title">Validate Form</div>
+      <form action="" class="form">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" class="name" required />
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          />
+        </div>
+        <input type="submit" value="Submit" class="submit" />
+      </form>
+
+      <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital(uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
