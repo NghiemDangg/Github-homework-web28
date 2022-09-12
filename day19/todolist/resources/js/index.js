@@ -1,8 +1,7 @@
 const todoList = document.querySelector(".todo-list");
 const todoInput = document.querySelector("#todo-input");
 const btnAdd = document.querySelector("#btn-add");
-const filterOption = document.querySelector(".todo-option");
-
+const todoItem = document.querySelector(".todo-item");
 let isUpdate = false;
 let idUpdate = null;
 //danh sách công việc là 1 mảng và mỗi mảng là 1 obj
@@ -67,41 +66,28 @@ btnAdd.addEventListener("click", function () {
 
   todoInput.value = ""; //clear công việc vừa nhập vào để nhập công việc mới
 });
+//create Item
 
+const createTodoItem = ({ id, title, status }) => {
+  return `<div class="todo-item ${status ? "active-todo" : ""}">
+    <div class="todo-item-title">
+      <input type="checkbox" ${status ? "checked" : ""} onClick = "toggleStatus(${id})">
+      <p>${title}</p>
+    </div>
+    <div class="option">
+      <button class="btn btn-update" onClick = "updateTodo(${id})">
+        <i class="fa-solid fa-pen-to-square icon-update"></i>
+      </button>
+      <button class="btn btn-delete" onClick = "deleteTodo(${id})">
+        <i class="fa-solid fa-square-xmark icon-delete"></i>
+      </button>
+    </div>
+  </div>`;
+};
 //render dữ liệu
-function renderUI(arr) {
-  todoList.innerHTML = "";
-
-  if (arr.length == 0) {
-    todoList.innerHTML =
-      '<p class = "todos-empty"> Không có công việc nào trong danh sách</p>';
-  } else {
-    //duyệt qua mảng todos để hiển thị công việc ra ngoài màn hình
-    for (let i = 0; i < arr.length; i++) {
-      const t = arr[i];
-      todoList.innerHTML += `<div class="todo-item ${
-        t.status ? "active-todo" : ""
-      }">
-        <div class="todo-item-title">
-          <input type="checkbox" ${
-            t.status ? "checked" : ""
-          } onClick = "toggleStatus(${t.id})">
-          <p>${t.title}</p>
-        </div>
-        <div class="option">
-          <button class="btn btn-update" onClick = "updateTodo(${t.id})">
-            <i class="fa-solid fa-pen-to-square icon-update"></i>
-          </button>
-          <button class="btn btn-delete" onClick = "deleteTodo(${t.id})">
-            <i class="fa-solid fa-square-xmark icon-delete"></i>
-          </button>
-        </div>
-      </div>`;
-    }
-  }
-}
-
-//Update công việc
+const renderUI = (todos,filter) => {
+  todoList.innerHTML = filterTodo(todos, filter).map(createTodoItem).join("");
+};
 
 function updateTodo(id) {
   let title;
@@ -125,7 +111,7 @@ function deleteTodo(id) {
       todos.splice(i, 1); // xoá phần tử tại vị trí id trùng với id trong mảng todos
     }
   }
-  renderUI(todos);
+  renderUI(todos,filter);
 }
 
 //chỉnh sửa trạng thái công việc (check box)
@@ -136,21 +122,31 @@ function toggleStatus(id) {
       todos[i].status = !todos[i].status;
     }
   }
-  renderUI(todos);
+  renderUI(todos,filter);
 }
 //filter todos
-let all = document.getElementById("all");
-let unactive = document.getElementById("unactive");
-let active = document.getElementById("active");
-
-all.addEventListener("click", () => {
-  renderUI(todos);
+const filterTodo = (todos, filter) => {
+  switch (filter) {
+    case 2: {
+      return todos.filter((todo) => !todo.status);
+    }
+    case 3: {
+      return todos.filter((todo) => todo.status);
+    }
+    default: {
+      return todos;
+    }
+  }
+};
+let filter = 1;
+const formOptions = document.querySelector(".todo-option");
+formOptions.addEventListener("change", ()=>{
+  filter = +formOptions.elements["todo-option-item"].value;
+// console.log(filterTodo(todos,filter)) ;
+filterTodo(todos,filter);
+renderUI(todos, filter);
 });
-
-unactive.addEventListener("click", () => {
- 
-});
-renderUI(todos);
+renderUI(todos,filter);
 /**Local Storage
  * Là một phần tích hợp sẵn trong Browser giúp lưu trữ và truy vấn dữ liệu vô thời hạn trong trình duyệt của người dùng
  * Dữ liệu chỉ mất khi bạn sử dụng chức năng Clear History của trình duyệt, hoặc localStorage API để xoá
