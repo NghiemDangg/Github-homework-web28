@@ -108,7 +108,7 @@ function deleteTodo(id) {
 function toggleStatus(id) {
   for (let i = 0; i < todos.length; i++) {
     if (todos[i].id == id) {
-      todos[i].status = !todos[i].status;
+      todos[i].completed = !todos[i].completed;
     }
   }
   renderUI(todos,filter);
