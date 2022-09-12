@@ -130,7 +130,10 @@ h1 {
 .todo-container {
     margin-top: 20px;
 }
-
+.todo-list{
+    height: 300px;
+    overflow-y:scroll;
+}
 .todo-item {
     display: flex;
     justify-content: space-between;

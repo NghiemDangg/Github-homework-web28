@@ -4,36 +4,21 @@ const btnAdd = document.querySelector("#btn-add");
 const todoItem = document.querySelector(".todo-item");
 let isUpdate = false;
 let idUpdate = null;
+const todos = [];
+const URL = {
+  TODOS: "https://jsonplaceholder.typicode.com/todos?userId=1"
+}
+
+const getAllTodos = () =>{
+  return axios.get(URL.TODOS);
+};
+
 //danh sách công việc là 1 mảng và mỗi mảng là 1 obj
 //id, title, status
 function createId() {
   let id = Math.floor(Math.random() * 100000); //render tự động ra 1 id trong khoảng từ 0 --> 100000
   return id;
 }
-
-let todos = [
-  {
-    id: createId(),
-    title: "Làm slide",
-    status: true,
-  },
-  {
-    id: createId(),
-    title: "Đóng tiền nhà tháng 9",
-    status: false,
-  },
-  {
-    id: createId(),
-    title: "Học lập trình JavaScript",
-    status: true,
-  },
-  {
-    id: createId(),
-    title: "Push up 3 hiệp mỗi hiệpp 15 lần",
-    status: false,
-  },
-];
-//Thêm công việc
 
 btnAdd.addEventListener("click", function () {
   let todoTitle = todoInput.value;
@@ -68,10 +53,10 @@ btnAdd.addEventListener("click", function () {
 });
 //create Item
 
-const createTodoItem = ({ id, title, status }) => {
-  return `<div class="todo-item ${status ? "active-todo" : ""}">
+const createTodoItem = ({ id, title, completed }) => {
+  return `<div class="todo-item ${completed ? "active-todo" : ""}">
     <div class="todo-item-title">
-      <input type="checkbox" ${status ? "checked" : ""} onClick = "toggleStatus(${id})">
+      <input type="checkbox" ${completed ? "checked" : ""} onClick = "toggleStatus(${id})">
       <p>${title}</p>
     </div>
     <div class="option">
@@ -86,7 +71,11 @@ const createTodoItem = ({ id, title, status }) => {
 };
 //render dữ liệu
 const renderUI = (todos,filter) => {
-  todoList.innerHTML = filterTodo(todos, filter).map(createTodoItem).join("");
+  if(todos.length == ""){
+    todoList.innerHTML = '<p class="todos-empty">Không có công việc nào trong danh sách</p>';
+  }else{
+    todoList.innerHTML = filterTodo(todos, filter).map(createTodoItem).join("");
+  }
 };
 
 function updateTodo(id) {
@@ -128,10 +117,10 @@ function toggleStatus(id) {
 const filterTodo = (todos, filter) => {
   switch (filter) {
     case 2: {
-      return todos.filter((todo) => !todo.status);
+      return todos.filter((todo) => !todo.completed);
     }
     case 3: {
-      return todos.filter((todo) => todo.status);
+      return todos.filter((todo) => todo.completed);
     }
     default: {
       return todos;
@@ -146,6 +135,12 @@ formOptions.addEventListener("change", ()=>{
 filterTodo(todos,filter);
 renderUI(todos, filter);
 });
+
+getAllTodos().then(({ data }) => {
+  todos.push(...data);
+  renderUI(todos, filter);
+});
+
 renderUI(todos,filter);
 /**Local Storage
  * Là một phần tích hợp sẵn trong Browser giúp lưu trữ và truy vấn dữ liệu vô thời hạn trong trình duyệt của người dùng
