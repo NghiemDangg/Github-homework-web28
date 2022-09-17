@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Danh sách học viên</title>
+    <style>
+      .text-danger:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4">Danh sách học viên</h1>
+
+      <p>
+        <a href="./create.html" class="btn btn-success"
+          ><i class="fa fa-plus-circle"></i> Thêm học viên</a
+        >
+      </p>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>Họ tên</th>
+              <th>Ngày sinh</th>
+              <th>Email</th>
+              <th>Số điện thoại</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Đặng Quang Huy</td>
+              <td>24/11/1994</td>
+              <td>quanghuy@gmail.com</td>
+              <td>0389958276</td>
+              <td>
+                <a href="" class="text-info"
+                  ><i class="fa fa-edit"></i> Chỉnh sửa</a
+                >
+                |
+                <a class="text-danger"><i class="fa fa-trash-alt"></i> Xóa</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Nguyễn Thu Hằng</td>
+              <td>01/05/1999</td>
+              <td>thuhang@gmail.com</td>
+              <td>0345928245</td>
+              <td>
+                <a href="" class="text-info"
+                  ><i class="fa fa-edit"></i> Chỉnh sửa
+                </a>
+                |
+                <a class="text-danger"><i class="fa fa-trash-alt"></i> Xóa</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

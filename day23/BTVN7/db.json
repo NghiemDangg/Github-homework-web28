@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "fullname": "Nghiêm Đăng",
+      "dateOfBirth": "2001-04-14",
+      "email": "Dang@gmail.com",
+      "phone": "036xxx"
+    },
+    {
+      "id": 2,
+      "fullname": "Hải Đăng",
+      "dateOfBirth": "2000-02-16",
+      "email": "HaiDang@gmail.com",
+      "phone": "036xxx"
+    },
+    {
+      "id": 3,
+      "fullname": "Đăng",
+      "dateOfBirth": "2003-08-16",
+      "email": "Dang@gmail.com",
+      "phone": "092xxx"
+    }
+  ]
+}
