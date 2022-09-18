@@ -18,3 +18,8 @@ $form.on('submit', {}, (e) => {
     window.location.href = "/";
   });
 });
+
+
+export const validate = () =>{
+
+};

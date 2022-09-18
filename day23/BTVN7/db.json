@@ -20,6 +20,20 @@
       "dateOfBirth": "2003-08-16",
       "email": "Dang@gmail.com",
       "phone": "092xxx"
+    },
+    {
+      "fullname": "Dang ki",
+      "datOfBirth": "14/04/1999",
+      "email": "ererer@gmail.com",
+      "phone": "098xxx",
+      "id": 4
+    },
+    {
+      "fullname": "UserTest2",
+      "datOfBirth": "14/04/2000",
+      "email": "UserTest2@gmail.com",
+      "phone": "098xxx",
+      "id": 5
     }
   ]
 }
