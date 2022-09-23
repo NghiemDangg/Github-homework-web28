@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+}
+
+.top-header {
+  background-color: #fef7f6;
+  padding: 10px 0;
+  font-size: 11px;
+}
+.top-header span:not(:last-child) {
+  padding-right: 15px;
+}
+
+.lang-item:hover {
+  background-color: #fef7f6;
+  cursor: pointer;
+}
+
+.badge {
+  --bs-badge-font-size: 0.5em;
+}
+
+.icon-search {
+  border: none;
+}
+
+.icon {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.nav-item {
+  color: #000;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+.nav-item .nav-link:hover {
+  color: #ff5353;
+}
+.nav-link {
+  color: #000;
+}
+
+.banner {
+  background-image: url(https://demo.themeies.com/silon/images/bg-1.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.banner-tag {
+  color: #565656;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+.banner-title {
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 70px;
+  margin-bottom: 45px;
+}
+.banner-btn {
+  background-color: #ff5353;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banner-btn:hover{
+  background-color: #ff3535 !important;
+  color: #fef7f6 !important;
+}
+.banner-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 360px) {
+  .top-header {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .top-header {
+    display: block;
+  }
+
+  .banner-content {
+    max-width: 476px;
+    float: right;
+  }
+}
