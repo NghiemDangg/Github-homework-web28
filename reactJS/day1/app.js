@@ -8,11 +8,11 @@ function checkReversed(str) {
 }
 
 function checkReversed2(str) {
-  if (str.length <= 1) {
+  if (str.trim().length <= 1) {
     return true;
   }
-  for (let i = 0; i <= Math.floor(str.length / 2); i++) {
-    if (str[i] !== str[str.length - 1 - i]) {
+  for (let i = 0; i <= Math.floor(str.trim().length / 2); i++) {
+    if (str[i] !== str[str.trim().length - 1 - i]) {
       return false;
     }
   }
