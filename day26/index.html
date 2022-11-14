@@ -21,6 +21,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -56,7 +63,7 @@
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-expand-md bg-white">
+      <nav class="navbar navbar-expand-md bg-white position-relative">
         <div class="container">
           <div class="navbar-brand">
             <a href="#"
@@ -77,59 +84,62 @@
 
           <div
             id="navbar-menu"
-            class="navbar-collapse collapse position-md-absolute order-2 order-md-1 top-100 start-0 end-0 justify-content-center"
+            class="navbar-collapse collapse position-absolute order-2 order-md-1 top-100 start-0 end-0 justify-content-center"
           >
-            <ul class="nav flex-column flex-md-row">
-              <li class="nav-item">
-                <div class="dropdown open">
-                  <a
-                    class="dropdown-toggle nav-link"
-                    type="button"
-                    id="triggerId"
-                    data-bs-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Home
-                  </a>
-                  <ul
-                    class="dropdown-menu navbar-sub"
-                    aria-labelledby="triggerId"
-                  >
-                    <li>
-                      <a class="dropdown-item navbar-sub-item" href="#"
-                        >Home01</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item navbar-sub-item" href="#"
-                        >Home01</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item navbar-sub-item" href="#"
-                        >Home01</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-            </ul>
+            <div class="container">
+              <ul class="nav flex-column flex-md-row">
+                <li class="nav-item">
+                  <div class="dropdown open">
+                    <a
+                      class="btn-toggle nav-link position-relative"
+                      type="button"
+                      id="triggerId"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Home
+                      <i class="arrow-icon bi bi-chevron-compact-down"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu navbar-sub"
+                      aria-labelledby="triggerId"
+                    >
+                      <li>
+                        <a class="dropdown-item navbar-sub-item" href="#"
+                          >Home01</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item navbar-sub-item" href="#"
+                          >Home01</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item navbar-sub-item" href="#"
+                          >Home01</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="navbar-feature order-1 order-md-2">
@@ -182,43 +192,398 @@
         </div>
       </section>
 
-      <section class="products">
+      <section class="product">
         <div class="container text-center">
-          <div class="row ">
-            <div class="col-12 ">
-              <div class="product-heading ">
-                <h3 class="product-title ">Featured product</h3>
+          <div class="row">
+            <div class="col-12">
+              <div class="product-heading">
+                <h3 class="product-title">Featured product</h3>
               </div>
             </div>
           </div>
 
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="product-item">
+                <figure class="figure product-thumb">
+                  <img
+                    src="https://demo.themeies.com/silon/images/products/1.jpg"
+                    class="figure-img img-fluid rounded"
+                    alt="..."
+                  />
+                  <div class="action-links">
+                    <a href="#" class="view icon">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="wishlist icon">
+                      <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" class="add-cart icon">
+                      <i class="bi bi-cart"></i>
+                    </a>
+                  </div>
+                </figure>
+                <figcaption class="figure-caption product-content">
+                  <h5 class="product-name">Red Women Purses</h5>
+                  <div class="ratings">
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                  </div>
+                  <p class="price">$35</p>
+                </figcaption>
+              </div>
+              <div class="product-item">
+                <figure class="figure product-thumb">
+                  <img
+                    src="https://demo.themeies.com/silon/images/products/1.jpg"
+                    class="figure-img img-fluid rounded"
+                    alt="..."
+                  />
+                  <div class="action-links">
+                    <a href="#" class="view icon">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="wishlist icon">
+                      <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" class="add-cart icon">
+                      <i class="bi bi-cart"></i>
+                    </a>
+                  </div>
+                </figure>
+                <figcaption class="figure-caption product-content">
+                  <h5 class="product-name">Red Women Purses</h5>
+                  <div class="ratings">
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                  </div>
+                  <p class="price">$35</p>
+                </figcaption>
+              </div>
+              <div class="product-item">
+                <figure class="figure product-thumb">
+                  <img
+                    src="https://demo.themeies.com/silon/images/products/1.jpg"
+                    class="figure-img img-fluid rounded"
+                    alt="..."
+                  />
+                  <div class="action-links">
+                    <a href="#" class="view icon">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                    <a href="#" class="wishlist icon">
+                      <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" class="add-cart icon">
+                      <i class="bi bi-cart"></i>
+                    </a>
+                  </div>
+                </figure>
+                <figcaption class="figure-caption product-content">
+                  <h5 class="product-name">Red Women Purses</h5>
+                  <div class="ratings">
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                    <a href="">
+                      <i class="bi bi-star"></i>
+                    </a>
+                  </div>
+                  <p class="price">$35</p>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-banner-sale">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="banner-content text-center">
+                <h1>50% off</h1>
+                <h4>all women's collection</h4>
+                <a type="button" class="btn banner-btn">show now</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner-img2">
+                <img
+                  src="https://demo.themeies.com/silon/images/ban-2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Most popular -->
+      <section class="product">
+        <div class="container text-center">
           <div class="row">
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
-             <div class="product-item">
-              <div class="product-thumb">
-                
+            <div class="col-12">
+              <div class="product-heading">
+                <h3 class="product-title">Most popular</h3>
               </div>
-             </div>
             </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
-              <div class="card" style="width: 18rem;">
-                <img src="https://demo.themeies.com/silon/images/products/2.jpg" class="card-img-top" alt="https://demo.themeies.com/silon/images/products/2.jpg">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-6">
+                  <div class="product-item">
+                    <figure class="figure product-thumb">
+                      <img
+                        src="https://demo.themeies.com/silon/images/products/4.jpg"
+                        class="figure-img img-fluid rounded"
+                        alt="..."
+                      />
+                      <div class="action-links">
+                        <a href="#" class="view icon">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="#" class="wishlist icon">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                        <a href="#" class="add-cart icon">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    </figure>
+                    <figcaption class="figure-caption product-content">
+                      <h5 class="product-name">Red Women Purses</h5>
+                      <div class="ratings">
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                      </div>
+                      <p class="price">$35</p>
+                    </figcaption>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
-              <div class="card" style="width: 18rem;">
-                <img src="https://demo.themeies.com/silon/images/products/3.jpg" class="card-img-top" alt="https://demo.themeies.com/silon/images/products/3.jpg">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                <div class="col-6">
+                  <div class="product-item">
+                    <figure class="figure product-thumb">
+                      <img
+                        src="https://demo.themeies.com/silon/images/products/5.jpg"
+                        class="figure-img img-fluid rounded"
+                        alt="..."
+                      />
+                      <div class="action-links">
+                        <a href="#" class="view icon">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="#" class="wishlist icon">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                        <a href="#" class="add-cart icon">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    </figure>
+                    <figcaption class="figure-caption product-content">
+                      <h5 class="product-name">Red Women Purses</h5>
+                      <div class="ratings">
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                      </div>
+                      <p class="price">$35</p>
+                    </figcaption>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="product-item">
+                    <figure class="figure product-thumb">
+                      <img
+                        src="https://demo.themeies.com/silon/images/products/6.jpg"
+                        class="figure-img img-fluid rounded"
+                        alt="..."
+                      />
+                      <div class="action-links">
+                        <a href="#" class="view icon">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="#" class="wishlist icon">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                        <a href="#" class="add-cart icon">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    </figure>
+                    <figcaption class="figure-caption product-content">
+                      <h5 class="product-name">Red Women Purses</h5>
+                      <div class="ratings">
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                      </div>
+                      <p class="price">$35</p>
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-item">
+                    <figure class="figure product-thumb">
+                      <img
+                        src="https://demo.themeies.com/silon/images/products/7.jpg"
+                        class="figure-img img-fluid rounded"
+                        alt="..."
+                      />
+                      <div class="action-links">
+                        <a href="#" class="view icon">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="#" class="wishlist icon">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                        <a href="#" class="add-cart icon">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </div>
+                    </figure>
+                    <figcaption class="figure-caption product-content">
+                      <h5 class="product-name">Red Women Purses</h5>
+                      <div class="ratings">
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                        <a href="">
+                          <i class="bi bi-star"></i>
+                        </a>
+                      </div>
+                      <p class="price">$35</p>
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="section features">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="features-box">
+                <i class="bi bi-cash-coin features-icon"></i>
+                <h5 class="features-title">Money back gurantee</h5>
+                <p class="features-content">Great fill signs he evening</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="features-box">
+                <i class="bi bi-truck features-icon"></i>
+                <h5 class="features-title">Free Delivery</h5>
+                <p class="features-content">Great fill signs he evening</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="features-box">
+                <i class="bi bi-headset features-icon"></i>
+                <h5 class="features-title">Alway support</h5>
+                <p class="features-content">Great fill signs he evening</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="features-box">
+                <i class="bi bi-currency-bitcoin features-icon"></i>
+                <h5 class="features-title">Secure payment</h5>
+                <p class="features-content">Great fill signs he evening</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </main>
   </body>
 </html>

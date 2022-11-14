@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -28,8 +28,11 @@
   padding: 0 10px;
   font-size: 20px;
 }
-
-.nav-item {
+.nav {
+  background-color: #fff;
+}
+.nav-item,
+.navbar-sub-item {
   color: #000;
   display: block;
   font-size: 13px;
@@ -40,10 +43,24 @@
 .nav-item .nav-link:hover {
   color: #ff5353;
 }
-.nav-link {
+.nav-link,
+.navbar-sub-item {
   color: #000;
+  padding: 20px 15px;
 }
-
+.arrow-icon {
+  font-weight: 800;
+  font-size: 16px;
+  position: absolute;
+  right: 16px;
+  bottom: 18px;
+}
+.dropdown .navbar-sub {
+  width: 100%;
+  position: relative;
+  border: none;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 7%);
+}
 .banner {
   background-image: url(https://demo.themeies.com/silon/images/bg-1.jpg);
   background-size: cover;
@@ -59,28 +76,38 @@
   line-height: 0.8;
   letter-spacing: 2.8px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 .banner-title {
-  font-weight: 500;
-  font-size: 58px;
-  line-height: 70px;
-  margin-bottom: 45px;
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 35px;
 }
 .banner-btn {
   background-color: #ff5353;
   border-radius: 3px;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 0.8;
+  text-transform: capitalize;
+  min-width: 170px;
+  padding: 20px 25px;
 }
 
-.banner-btn:hover{
+.banner-btn:hover {
   background-color: #ff3535 !important;
   color: #fef7f6 !important;
 }
-.banner-img img{
+.banner-img img {
   width: 100%;
   height: auto;
   display: block;
+}
+.banner-content {
+  padding: 60px 0;
 }
 @media (min-width: 360px) {
   .top-header {
@@ -96,4 +123,149 @@
     max-width: 476px;
     float: right;
   }
+}
+
+/* product */
+.product {
+  padding: 50px 0px 20px 0px;
+}
+.product-heading {
+  margin-bottom: 80px;
+}
+.product-title {
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.product-item {
+}
+.product-thumb {
+  margin-bottom: 30px;
+  position: relative;
+}
+.action-links {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.action-links .icon {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.product-item:hover .action-links .icon:first-child {
+  -webkit-animation: fadeInUp 200ms;
+  animation: fadeInUp 200ms;
+}
+
+.product-item:hover .action-links .icon:nth-child(2) {
+  -webkit-animation: fadeInUp 400ms;
+  animation: fadeInUp 400ms;
+}
+.product-item:hover .action-links .icon:last-child {
+  -webkit-animation: fadeInUp 600ms;
+  animation: fadeInUp 600ms;
+}
+
+.icon:hover {
+  background-color: #ff5353;
+  color: #fff;
+}
+.icon {
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+.product-item:hover .action-links {
+  visibility: visible;
+  opacity: 1;
+}
+.product-content {
+}
+.product-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.ratings a {
+  font-size: 13px;
+  color: #ff5353;
+  text-decoration: none;
+}
+.price {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* banner-sale */
+
+.section-banner-sale {
+  background-color: #eae2d8;
+}
+.section-banner-sale .banner-content h1 {
+  font-family: "Dancing Script";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 56px;
+}
+
+.section-banner-sale .banner-content h4 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #000;
+}
+.banner-img2 img {
+  width: 80%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+/* features */
+
+.features {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.features-box {
+  margin-bottom: 30px;
+  border: 1px solid #ebeef0;
+  position: relative;
+  padding: 25px;
+  text-align: center;
+}
+.features-icon {
+  font-size: 60px;
+  color: #ff5353;
+}
+.features-title {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.features-content {
+  color: #888;
+  line-height: 18px;
 }
