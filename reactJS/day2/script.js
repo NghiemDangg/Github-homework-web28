@@ -2,13 +2,12 @@
  * Viết function đảo ngược một số
  */
 
-function reverce(n) {
-  n = n + "";
-  let numberReverse = n.toString().split("").reverse().join("");
-  return parseFloat(numberReverse);
+function reversedNum(num) {
+  return (
+    parseFloat(num.toString().split("").reverse().join("")) * Math.sign(num)
+  );
 }
 
-// console.log(reverce(0123));
 
 /**
  * 2, Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
@@ -83,7 +82,7 @@ function Arrays_sum(arr1, arr2) {
   return result;
 }
 
-console.log(Arrays_sum([1, 2], [1, 2, 3]));
+// console.log(Arrays_sum([1, 2], [1, 2, 3]));
 /**
  * 5, Write a JavaScript function to repeat a string a specified times.
  * Test Data :
@@ -94,17 +93,17 @@ console.log(Arrays_sum([1, 2], [1, 2, 3]));
  * “Error in string or count.”
  */
 function repeatString(string, count) {
-  if ((string == null) || (count == null) || (count === Infinity) || (count < 0)) {
+  if (string == null || count == null || count === Infinity || count < 0) {
     return "Error in string or count.";
   }
   count = count | 0;
   return new Array(count + 1).join(string);
 }
 
-console.log(repeatString("a", 4));
-console.log(repeatString("a"));
-console.log(repeatString("a", -2));
-console.log(repeatString("a", Infinity));
+// console.log(repeatString("a", 4));
+// console.log(repeatString("a"));
+// console.log(repeatString("a", -2));
+// console.log(repeatString("a", Infinity));
 /**
  *6
  * Write a JavaScript program to count number of words in string. Go to the editor
@@ -115,3 +114,14 @@ console.log(repeatString("a", Infinity));
  * input: " The quick brown fox "
  * output: 4
  */
+
+function countWords(string) {
+  string = string.replace(/(^\s*)|(\s*$)/gi, ""); //exclude  start and end white-space
+  string = string.replace(/[ ]{2,}/gi, " "); //2 or more space to 1
+  string = string.replace(/\n /, "\n"); // exclude newline with a start spacing
+  return string.split(" ").filter(function (str) {
+    return str != "";
+  }).length;
+  //return s.split(' ').filter(String).length; - this can also be used
+}
+console.log(countWords(" The quick brown fox "));
