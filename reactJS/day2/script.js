@@ -1,148 +1,117 @@
-/**exercise 1. Write a JavaScript program which prints
-the elements of the following array.*/
+/**
+ * Viết function đảo ngược một số
+ */
 
-function printElement() {
-  let a = [
-    [1, 2, 1, 24],
-    [8, 11, 9, 4],
-    [7, 0, 7, 27],
-    [7, 4, 28, 14],
-    [3, 10, 26, 7],
-  ];
+function reverce(n) {
+  n = n + "";
+  let numberReverse = n.toString().split("").reverse().join("");
+  return parseFloat(numberReverse);
+}
 
-  for (let i in a) {
-    console.log("row " + i);
-    for (let j in a[i]) {
-      console.log(a[i][j]);
+// console.log(reverce(0123));
+
+/**
+ * 2, Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
+ * Sample function : Longest_Country_Name([“Australia”, “Germany”, “United States of America”])
+ * Expected output : “United States of America”
+ */
+function get_Name(arr) {
+  return arr.reduce(function (longest_name, country) {
+    return longest_name > country.length ? longest_name : country;
+  }, "");
+}
+console.log(get_Name(["Australia", "Germany", "United States of America"]));
+/**
+ * 3, Write a JavaScript function to extract unique characters from a string.
+ * Example string : “thequickbrownfoxjumpsoverthelazydog”
+ * Expected Output : “thequickbrownfxjmpsvlazydg”
+ */
+
+function uniqueCharacters(str1) {
+  let uniqChar = ""; //tạo một chuỗi rỗng
+  let str = str1; // gán chuỗi đầu vào bằng 1 chuỗi khác
+  for (let i = 0; i < str.length; i++) {
+    if (uniqChar.indexOf(str[i]) === -1) {
+      //Kiểm tra xem thằng uniqChar có chứa ký tự giống trong thằng str không, nếu indexOf() không tìm thấy ký tự đó thì dẽ trả về -1
+      uniqChar += str[i]; //thêm ký tự đó vào chuỗi uniqChar
     }
   }
+  return uniqChar;
 }
-// printElement();
+//  console.log(uniqueCharacters("êuueueutheeeee"));
+/**
+ * 4, There are two arrays with individual values,
+ *  write a JavaScript program to compute the sum of each individual index value from the given arrays.
+ * Sample array :
+ * array1 = [1,0,2,3,4];
+ * array2 = [3,5,6,7,8,13];
+ * Expected Output : [4, 5, 8, 10, 12, 13]
+ */
 
-/**exercise 2. Write a JavaScript program
-to find the sum of squares of a numeric vector. */
-
-function sumOfSquares(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += Math.pow(arr[i], 2);
-  }
-  return sum;
-}
-// console.log(sumOfSquares([0, 1, 2, 3, 4, 5]));
-
-/**exercise 3. Write a JavaScript program to compute
- the sum and product of an array of integers. */
-function sumAndProduct(arr) {
-  let sum = 0;
-  let product = 1;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-    product *= arr[i];
-  }
-  console.log("Sum: " + sum + "\n" + "product: " + product);
-}
-
-// sumAndProduct([1, 2, 3, 4, 5, 6]);
-
-/**exercise 4. Write a JavaScript program to
-remove duplicate items from an array */
-
-function removeDuplicate(arr) {
-  let uniqueSet = new Set(arr);
-
-  const backToArray = [...uniqueSet];
-
-  return backToArray;
-}
-// console.log(removeDuplicate([1, 2, 3, 3, 4, 4, 5, 2, 7]));
-
-/**exercise 5. Write a JavaScript program to display the colors in the following way :
- * "1st choice is Blue ."
- * "2nd choice is Green."
- * "3rd choice is Red."
- * */
-
-let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
-
-function displayColorList(color) {
-  function Ordinal(n) {
-    let ord = ["th", "st", "nd", "rd"];
-  }
-
-  for (let i = 0; i < color.length; i++) {
-    let ordinal = i + 1;
-    let output = Ordinal(ordinal) + " choise is " + color[n] + " .";
-    console.log(output);
-  }
-}
-
-/**exercise 6. Write a JavaScript program to find the leap years
- in a given range of years. */
-
-function leap_year_range(st_y, end_y) {
-  let year_range = [];
-  let leap_year_list = [];
-
-  function test_leapYear(year) {
-    if (
-      (year % 4 === 0 && year % 100 !== 0) ||
-      (year % 100 == 0 && year % 400 === 0)
-    ) {
-      return year;
-    } else {
-      return false;
-    }
-  }
-
-  for (let i = st_y; i <= end_y; i++) {
-    year_range.push(i);
-  }
-
-  year_range.forEach(function (year) {
-    if (test_leapYear(year)) {
-      leap_year_list.push(year);
-    }
-  });
-  return leap_year_list;
-}
-
-// console.log(leap_year_range(2000, 2004));
-
-/**exercise 7. Write a JavaScript program to shuffle an array. */
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    let randomNum = Math.floor(Math.random() * (i + 1));
-    let temp = arr[i];
-    arr[i] = arr[randomNum];
-    arr[randomNum] = temp;
-  }
-  return arr;
-}
-
-// console.log(shuffleArray([1, 2, 3, 4, 5, 6, 7]));
-
-
-/**exercise 8. Write a JavaScript program to perform a binary search. */
-/**exercise 9. There are two arrays with individual values, write a JavaScript program to compute
-the sum of each individual index value from the given arrays. */
-
-function Arrays_sum(arr1,arr2){
+function Arrays_sum(arr1, arr2) {
   let result = [];
-  let number = 0;
-  let x = 0;
-  if (arr1.length === 0){
+  let i = 0;
+
+  if (arr1.length === 0) {
     return "array 1 is empty";
   }
-  if (arr2.length === 0){
+  if (arr2.length === 0) {
     return "array 2 is empty";
   }
 
-  while(number < arr1.length && number < arr2.length){
-    result.push(arr1[number] + arr2[number]);
-    number++;
-  };
+  //Sum of 2 arrays (if length of array1 = length array2)
+
+  while (i < arr1.length && i < arr2.length) {
+    result.push(arr1[i] + arr2[i]);
+    i++;
+  }
+
+  //if length of array1 < length array2
+
+  if (i === arr1.length) {
+    for (i; i < arr2.length; i++) {
+      result.push(arr2[i]);
+    }
+  }
+  //if length of array2 < length array1
+
+  if (i === arr2.length) {
+    for (i; i < arr1.length; i++) {
+      result.push(arr1[i]);
+    }
+  }
   return result;
 }
 
-console.log(Arrays_sum([1,0,2,3,4],[3,5,6,7,8,13]));
+console.log(Arrays_sum([1, 2], [1, 2, 3]));
+/**
+ * 5, Write a JavaScript function to repeat a string a specified times.
+ * Test Data :
+ * console.log(repeat_string(‘a’, 4));
+ * console.log(repeat_string(‘a’));
+ * Output :
+ * “aaaa”
+ * “Error in string or count.”
+ */
+function repeatString(string, count) {
+  if ((string == null) || (count == null) || (count === Infinity) || (count < 0)) {
+    return "Error in string or count.";
+  }
+  count = count | 0;
+  return new Array(count + 1).join(string);
+}
+
+console.log(repeatString("a", 4));
+console.log(repeatString("a"));
+console.log(repeatString("a", -2));
+console.log(repeatString("a", Infinity));
+/**
+ *6
+ * Write a JavaScript program to count number of words in string. Go to the editor
+ * Note :
+ * Remove white-space from start and end position.
+ * Convert 2 or more spaces to 1.
+ * Exclude newline with a start spacing.
+ * input: " The quick brown fox "
+ * output: 4
+ */
