@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 0 auto;
+        width: 30%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 2%;
+        margin-top: 20px;
+      }
+      .input_group label {
+      }
+      .input_group input {
+        width: 100%;
+        height: 36px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+      .button-wrapper {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .button {
+        width: calc(90% / 4);
+        margin: 0 3px;
+        height: 36px;
+      }
+      .title {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <div class="input_group">
+          <label for="input1">1st Number</label>
+          <input type="text" id="first_Num" />
+        </div>
+        <div class="input_group">
+          <label for="input2">2st Number</label>
+          <input type="text" id="second_Num" />
+        </div>
+
+        <div class="button-wrapper">
+          <button
+            class="button"
+            type="button"
+            id="btn_plus"
+            value="Add +"
+            onClick="sum()"
+          >
+            Add( + )
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="btn_subtract"
+            value="Subtract -"
+            onClick="Subtract()"
+          >
+            Subtract( - )
+          </button>
+
+          <button
+            class="button"
+            type="button"
+            id="btn_multipy"
+            value="Multipy *"
+            onClick="Multipy()"
+          >
+            Multipy( * )
+          </button>
+          <button class="button" type="button" id="btn_divide" value="Divide /" onClick="Divide()">
+            Divide( / )
+          </button>
+        </div>
+
+        <div class="title">The result is: <span id="result"></span></div>
+        <div class="title">History: <span id="history"></span></div>
+      </div>
+    </form>
+    <script>
+      function sum() {
+        const Num1 = document.getElementById("first_Num").value;
+        const Num2 = document.getElementById("second_Num").value;
+        const result_display = document.getElementById("result");
+        const history = document.getElementById("history");
+        const result = Number(Num1)  + Number(Num2);
+        result_display.innerHTML = result ;
+        history.innerHTML = result;
+        return result;
+      }
+      function Subtract(){
+        const Num1 = document.getElementById("first_Num").value;
+        const Num2 = document.getElementById("second_Num").value;
+        const result_display = document.getElementById("result");
+        const history = document.getElementById("history");
+        const result = Number(Num1)  - Number(Num2);
+        result_display.innerHTML = result ;
+        return result;
+      }
+      function Multipy() {
+        const Num1 = document.getElementById("first_Num").value;
+        const Num2 = document.getElementById("second_Num").value;
+        const result_display = document.getElementById("result");
+        const history = document.getElementById("history");
+        const result1 = Subtract();
+        history.innerHTML = result1;
+        const result = Number(Num1)  * Number(Num2);
+        result_display.innerHTML = result ;
+        return result;
+      }
+      function Divide() {
+        const Num1 = document.getElementById("first_Num").value;
+        const Num2 = document.getElementById("second_Num").value;
+        const result_display = document.getElementById("result");
+        const history = document.getElementById("history");
+        const result1 = Multipy();
+        history.innerHTML = result1;
+        const result = Number(Num1)  / Number(Num2);
+        result_display.innerHTML = result ;
+      }
+    </script>
+  </body>
+</html>
