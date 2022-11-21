@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-style</title>
+    <style>
+      /* #content{
+    font-family: 'Courier New', Courier, monospace;
+} */
+    </style>
+  </head>
+  <body>
+    <h2 id="content">The quick brown fox</h2>
+    <form action="">
+      <div class="form-group">
+        <label for="Fontsize">Font Size</label>
+        <input
+          type="text"
+          class="input-box"
+          id="fontsize"
+          placeholder="Input font size"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Fontweight">Font Weight</label>
+        <input
+          type="text"
+          class="input-box"
+          id="fontweight"
+          placeholder="Input font weight"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Color">Color</label>
+        <input
+          type="text"
+          class="input-box"
+          id="color"
+          placeholder="Input Color"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Fontfamily">Font Family</label>
+        <input
+          type="text"
+          class="input-box"
+          id="fontfamily"
+          placeholder="Input font family"
+        />
+      </div>
+
+      <button type="button" id="btn-apply" onclick="apply_property()">
+        Apply
+      </button>
+    </form>
+
+    <script>
+        function apply_property(){
+                  const content = document.getElementById("content");
+                  const fontsize = document.getElementById("fontsize").value;
+                  const fontweight = document.getElementById("fontweight").value;
+                  const color = document.getElementById("color").value;
+                  const fontfamily = document.getElementById("fontfamily").value;
+                  content.style.fontSize = fontsize;
+                  content.style.fontWeight = fontweight;
+                  content.style.color = color;
+                  content.style.fontFamily = fontfamily;
+              }
+    </script>
+  </body>
+</html>
