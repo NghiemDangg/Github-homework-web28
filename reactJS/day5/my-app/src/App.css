@@ -1,0 +1,62 @@
+body{
+  background-color: pink;
+}
+.Container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 45%;
+  height: auto;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.Image-wrapper{
+  height: 100%;
+  width: 50%;
+}
+.Image-wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit:contain;
+}
+.content-wrapper{
+  width: 50%;
+  padding: 40px;
+}
+.heading{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.title{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 40px;
+}
+.descripstion{
+color: #ccc;
+margin-bottom: 30px;
+}
+/* content-footer */
+.content-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.price{
+  font-size: 40px;
+  font-weight: 700;
+  flex: 2;
+}
+.btn-buy{
+  background-color: rgb(28, 167, 180);
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  flex: 4;
+  font-size: 28px;
+  border-radius: 24px;
+}
