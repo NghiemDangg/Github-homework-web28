@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-list</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1950/1950630.png" type="image/x-icon">
+    <!-- Bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="todoList-wrapper">
+      <div class="todoList-header">
+        <h2 class="todolist-name">Todo List</h2>
+        <input
+          type="text"
+          class="input-task"
+          id="input-task-id"
+          placeholder="Nhập nội dung công việc"
+        />
+        <button id="btn-add-task">Add task</button>
+      </div>
+      <div class="todoList-body" id="style-4">
+        <div id="task-list"></div>
+
+      </div>
+      <button id="btn-clear">Clear All</button>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

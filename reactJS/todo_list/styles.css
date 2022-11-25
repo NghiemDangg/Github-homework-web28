@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.todoList-wrapper {
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-top: 60px;
+  border-radius: 14px;
+}
+.todoList-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.todolist-name {
+  margin-bottom: 16px;
+  font-size: 30px;
+}
+.input-task {
+  width: 78%;
+  height: 36px;
+  padding: 8px;
+  border-radius: 8px;
+}
+#btn-add-task,
+#btn-clear {
+  width: 20%;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+#btn-clear {
+  margin-top: 20px;
+}
+.todoList-body {
+  height: 300px;
+  overflow-y:scroll;
+}
+#task-list {
+}
+.task-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+.task-name {
+  font-size: 14px;
+  display: flex;
+}
+.task-content {
+  margin-left: 8px;
+}
+#task-edit {
+  margin-right: 8px;
+  transition: linear 0.2s;
+}
+#task-edit:hover {
+  transition: linear 0.2s;
+  opacity: 0.8;
+  color: rgb(65, 156, 25);
+}
+#task-delete:hover {
+  transition: linear 0.2s;
+  opacity: 0.8;
+  color: red;
+}
+.todos-empty{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    line-height: 360px;
+    font-style: italic;
+}
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #504f4f;
+	border: 2px solid #555555;
+}
