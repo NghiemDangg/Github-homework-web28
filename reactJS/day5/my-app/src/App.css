@@ -13,16 +13,15 @@ body{
   border-radius: 14px;
 }
 .Image-wrapper{
-  height: 100%;
-  width: 50%;
+  flex: 5;
 }
 .Image-wrapper .Image{
   height: 100%;
   width: 100%;
-  object-fit:contain;
+  object-fit:cover;
 }
 .content-wrapper{
-  width: 50%;
+  flex: 5;
   padding: 40px;
 }
 .heading{
@@ -30,7 +29,7 @@ body{
   font-weight: 700;
   margin-bottom: 8px;
 }
-.title{
+.supplier{
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.35);

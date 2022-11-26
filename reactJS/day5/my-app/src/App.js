@@ -1,31 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProductCard from "./ProductCard";
 
 function App() {
+  //data nhận về dưới dạng obj
+
+  const product = {
+    name: 'Harvest Vase',
+    image:
+      'https://i.pinimg.com/originals/07/59/6e/07596e8518aaf580a8356670d2ee9a4c.jpg',
+    description:
+      'Thrown and hand carved vase, part of the Sian for The Village Pottery limited editions range. Beautiful with or without flowers. Glazed inside for fresh or dried flowers.',
+    price: '78',
+    supplier: 'studio and friends',
+  };
+
+
   return (
-    <div className="Container">
-      <div className="Image-wrapper">
-        <img
-          className="Image"
-          src="https://www.knots.ph/images/default-source/flowers/hand-bouquets-2022/bq2118_340.jpg?sfvrsn=0"
-        ></img>
-      </div>
-
-      <div className="content-wrapper">
-        <div className="heading">Harvest Vase</div>
-        <div className="title">by studio and friends</div>
-
-        <div className="descripstion">
-          Thrown and hand carved vase, part of the Sian for The Village Pottery
-          limited editions range. Beautiful with or without flowers. Glazed
-          inside for fresh or dried flowers.
-        </div>
-
-        <div className="content-footer">
-          <div className="price">78$</div>
-          <button className = "btn-buy">buy now</button>
-        </div>
-      </div>
+    <div>
+      <ProductCard
+      product = {product}></ProductCard>
     </div>
   );
 }
