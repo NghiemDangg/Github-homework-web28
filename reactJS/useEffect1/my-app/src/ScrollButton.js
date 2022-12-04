@@ -16,20 +16,17 @@ export default function ScrollButton() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-  useEffect(() => {
-    const handleClick = () => {
-      window.scrollY = 0;
-    };
-    window.addEventListener("click", handleClick);
-    return () => {
-      window.removeEventListener("click", handleClick);
-    };
-  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div>
-      {showGoToTop && <button className="scroll-btn">Go To Top</button>}
+      {showGoToTop && <button onClick={scrollToTop} className="scroll-btn">Go To Top</button>}
     </div>
   );
 }
