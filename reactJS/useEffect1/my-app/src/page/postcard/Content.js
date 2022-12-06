@@ -8,7 +8,7 @@ export default function PostCard() {
       .then((posts) => {
         setPosts(posts);
       });
-  }, [posts]);
+  }, []);
 
   return (
     <div>

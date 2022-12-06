@@ -1,13 +1,18 @@
+import { useState } from "react";
 import "./App.css";
-import PostCard from "./Content";
-import ScrollButton from "./ScrollButton";
-import SearchBar from "./Search";
+import PostCard from "./page/postcard/Content";
+import ScrollButton from "./page/postcard/ScrollButton";
+import SearchBar from "./page/postcard/Search";
+import Timer from "./page/timer/Timer";
 function App() {
+  const [show, setShow] = useState(false);
   return (
     <div className="App">
-      <SearchBar />
-      <PostCard />
-      <ScrollButton />
+      
+      <button onClick={()=>{
+        setShow(!show)
+      }}>click me</button>
+      {show && <Timer/>}
     </div>
   );
 }
