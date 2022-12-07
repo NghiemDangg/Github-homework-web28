@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import CartManagement from "./page/CartManagement/CartManagement";
 import PostCard from "./page/postcard/Content";
 import ScrollButton from "./page/postcard/ScrollButton";
 import SearchBar from "./page/postcard/Search";
@@ -12,7 +13,7 @@ function App() {
       <button onClick={()=>{
         setShow(!show)
       }}>click me</button>
-      {show && <Timer/>}
+      {show && <CartManagement/>}
     </div>
   );
 }

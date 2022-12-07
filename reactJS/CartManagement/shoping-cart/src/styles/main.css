@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+}
+.cards{
+    width: 250px;
+    padding: 20px;
+    border-radius: 6px;
+}
+.cards:hover{
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+.image_box img{
+    width: 150px;
+    height: 200px;
+}
+.name{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.price{
+    color: gray;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.main-detail{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-add{
+    padding: 5px 10px;
+    margin-top: 20px;
+    border: none;
+    font-weight: 500;
+    background-color: #fc4d2a;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+
+}
