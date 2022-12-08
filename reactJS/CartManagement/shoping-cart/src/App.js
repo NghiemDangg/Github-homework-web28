@@ -35,7 +35,7 @@ const App = () => {
     }
 
     const arr = cart.map((data) => {
-      if(data.amount > 0|| value===1){
+      if(data.amount > 1|| value===1){
         if (data.id === item.id) {
           data.amount = data.amount + value;
         }

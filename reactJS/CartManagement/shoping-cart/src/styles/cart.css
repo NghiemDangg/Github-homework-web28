@@ -24,21 +24,27 @@ article {
 .border-gradient {
   border-image-source: linear-gradient(#ae3820, #ff4d00) !important;
 }
-.cart_img {
+.cart_description {
   display: flex;
   align-items: center;
   flex: 6;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.cart_img img {
+.cart_description img {
   width: 50%;
   height: 100px;
   object-fit: cover;
   border-radius: 4px;
+  flex: 1;
+}
+.name-wrap{
+  flex: 1;
 }
 .cart_name {
   font-weight: 500;
   text-transform: uppercase;
+ 
+  text-align: center;
 }
 .cart_btn {
   flex: 2;

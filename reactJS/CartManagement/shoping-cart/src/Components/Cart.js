@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/cart.css";
-const Cart = ({ cart, setCart,handleChange }) => {
+const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
   const handlePrice = () => {
     let ans = 0;
@@ -10,7 +10,7 @@ const Cart = ({ cart, setCart,handleChange }) => {
 
   const handleRemove = (id) => {
     const newArray = cart.filter((item) => {
-      if(item.id === id){
+      if (item.id === id) {
         item.amount = 1;
       }
       return item.id !== id;
@@ -27,16 +27,24 @@ const Cart = ({ cart, setCart,handleChange }) => {
       <div className="cart-list">
         {cart.map((item) => (
           <div className="cart_box border-gradient" key={item.id}>
-            <div className="cart_img">
+            <div className="cart_description">
               <img src={item.img} alt="" />
-              <p className="cart_name">{item.name}</p>
+              <div className="name-wrap">
+                <p className="cart_name">{item.name}</p>
+              </div>
             </div>
             <div className="cart_btn">
-              <button className="btn btn_minus" onClick={()=>handleChange(item,"-")}>
+              <button
+                className="btn btn_minus"
+                onClick={() => handleChange(item, "-")}
+              >
                 <i className="fa-solid fa-minus"></i>
               </button>
               <button className="btn-amount">{item.amount}</button>
-              <button className="btn btn_plus" onClick={()=>handleChange(item,"+")}>
+              <button
+                className="btn btn_plus"
+                onClick={() => handleChange(item, "+")}
+              >
                 <i className="fa-solid fa-plus"></i>
               </button>
             </div>
