@@ -2,16 +2,9 @@ import React,{useState,useEffect} from 'react';
 
 import items from '../data'
 import Cards from './Card';
-import '../styles/main.css'
-const Main = () => {
+import '../styles/main.css';
 
-    const [cart, setCart] = useState([]);
-
-    const handleClick = (item)=>{
-        cart.push(item)
-        // setCart([...cart,item])
-        console.log(cart);
-    }
+const Main = ({handleClick}) => {
     return (
            <section >
                 {
